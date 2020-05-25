@@ -1,8 +1,5 @@
 import express from 'express';
 import morgan from 'morgan';
-import { serverListening, exportVariables } from '../middlewares/middlewares';
-import routes from '../routes';
-import homeRouter from '../routes/homeRouter';
 
 
 const app = express();
@@ -16,8 +13,5 @@ app.set('views', './src/views');
 app.use(morgan('dev'));
 app.use(express.static('./src/public'));
 
-// routes or userMiddlewares
-app.use(exportVariables);
-app.use(routes.home, homeRouter);
 
 export default app;
