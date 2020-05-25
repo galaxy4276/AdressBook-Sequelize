@@ -1,13 +1,15 @@
 import express from 'express';
 
-import { app } from '../../app';
+import  app from '../controllers/appController';
 import routes from '../routes';
 
+
 export const serverListening = () => {
-  console.log(`${app.get('port')} 번 포트에서 대기 중..`);
+  console.log(`Running Express On ${app.get('port')}..`);
 };
 
 export const exportVariables = (req, res, next) => {
   res.locals.routes = routes;
   next();
 };
+

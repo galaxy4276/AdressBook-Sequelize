@@ -10,4 +10,3 @@ Node.js 초보자입니다.
 * 웹팩 파일만 추가 ( 차후에 설정 JS와 SCSS 를 Bundling )
 * 바벨 설정 추가 완료 ( @Babel/core, @Babel/node, @babel/preset-env )
 * routes 기초 설계 완료
-* 
