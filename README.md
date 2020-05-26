@@ -12,3 +12,4 @@ Node.js 초보자입니다.
 * routes 기초 설계 완료
 
 ### 5.26
+* WEBPACK 설정 완료 ( main.js -> (scss to css).css && main.js (converted))
