@@ -1,5 +1,3 @@
-import express from 'express';
-
 import  app from '../controllers/appController';
 import routes from '../routes';
 
