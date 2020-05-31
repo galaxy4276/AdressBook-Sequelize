@@ -1,1 +1,7 @@
-include ./partials/main
+include partials/main
+include mixins/homeContent
+
+block content
+  .wrapper
+    each obj in data
+      +content(obj)

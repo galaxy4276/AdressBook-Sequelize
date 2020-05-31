@@ -14,4 +14,8 @@ const sequelize = new Sequelize(config.database, config.username,
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
+db.Post = require('./Post')(sequelize, Sequelize);
+db.User = require('./User')(sequelize, Sequelize);
+
+
 module.exports = db;

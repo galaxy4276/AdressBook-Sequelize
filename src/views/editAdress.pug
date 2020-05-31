@@ -1,0 +1,10 @@
+include ./partials/main
+.fillOut_wrapper
+  form(action=routes.editAddress, method="post")
+    label 제목&nbsp;
+    input(type="text", name="title", placeholder="제목")
+    br
+    br
+    textarea(name="content", cols="30", rows="10")
+    br
+    button(type="submit") 작성하기

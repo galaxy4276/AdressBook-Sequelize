@@ -1,0 +1,9 @@
+.login_wrapper {
+  display: flex;
+  justify-content: center;
+  form {
+    flex-direction: column;
+    width: 150px;
+    border-radius: 5px;
+  }
+}

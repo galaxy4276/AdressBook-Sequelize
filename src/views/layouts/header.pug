@@ -1,9 +1,28 @@
 .main_banner
-  .login_container
-    ul
-      li 로그인
-      li 로그아웃
   #top_banner
-    p 당신을 위한 주소록
-  .menu_list
-    
+    a(href=routes.home) 당신을 위한 주소록
+.login_wrapper
+  ul.login_container
+    if user
+      li
+        a 로그 아웃
+    else
+      li 
+        a(href=routes.login) 로그인
+      li
+        a(href=routes.join) 회원가입
+.menu_list
+  nav.nav_wrapper
+    ul.nav_container
+      if user
+        li.nav_item 
+          a(href=routes.editAdress) 주소록 작성
+        li.nav_item 
+          a 주소록 목록
+        li.nav_item
+          a 개발 일지 보기
+      else
+        li.nav_item 
+          a 주소록 목록
+        li.nav_item
+          a 개발 일지 보기
