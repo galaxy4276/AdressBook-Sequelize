@@ -12,4 +12,3 @@ app.use(routes.home, homeRouter);
 
 app.listen(app.get('port'), serverListening);
 // 애플리케이션 실행
-

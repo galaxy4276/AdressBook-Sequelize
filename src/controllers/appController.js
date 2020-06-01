@@ -1,4 +1,4 @@
-  import express from 'express';
+import express from 'express';
 import morgan from 'morgan';
 import path from 'path';
 import cookie from 'cookie-parser';
@@ -10,6 +10,7 @@ import session from 'express-session';
 const sequelize = require('../models').sequelize;
 // passport 
 import passportConfig from '../controllers/passport';
+import { test } from './homeController';
 
 dotenv.config();  
 const app = express();
@@ -21,8 +22,11 @@ sequelize.sync()
     console.log('connect failed..\n', err);
   });
 
-// Application Settings       
-app.set('port', process.env.PORT || 8001);
+  passportConfig(passport);
+  
+  
+  // Application Settings       
+  app.set('port', process.env.PORT || 8001);
 app.set('view engine', 'pug');
 app.set('views', './src/views');
 app.set('views', path.resolve(__dirname, '../', 'views'));
@@ -43,8 +47,9 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
 }));
+
 app.use(passport.initialize());
-app.use(passport.authenticate())
-passportConfig();
+app.use(passport.session());
+
 
 export default app;
