@@ -8,9 +8,7 @@ module.exports = () => {
   });
 
   passport.deserializeUser((id, done) => {
-    User.findOne({
-      where: { id },
-    })
+    User.findById(id)
       .then(user => done(null, user))
       .catch(err => done(err));
   });
@@ -18,8 +16,6 @@ module.exports = () => {
   passport.use(new LocalStrategy({
     usernameField: 'id',
     passwordField: 'pw',
-    session: true,
-    passReqToCallback: false,
   }, async (id, pw, done) => {
     try {
       const user = await User.findOne({ id }, (err, user) => {
