@@ -1,8 +1,9 @@
 import routes from '../routes';
-import { Post } from '../models';
+import { Post, User } from '../models';
 import passport from 'passport';
 
 export const goHome = async (req, res) => {
+  console.log('req.user :', req.user);
   const data = await Post.findAll();
 
   res.render('home', { data });
@@ -32,7 +33,7 @@ export const postEditAddr = async (req, res) => {
 
 
 export const postLogin = passport.authenticate('local', {
-  failureRedirect: routes.home,
+  failureRedirect: routes.login,
   successRedirect: routes.home,
 });
 
@@ -40,3 +41,10 @@ export const postLogin = passport.authenticate('local', {
 export const getLogin = (req, res) => {
   res.render('login', {});
 };
+
+export const test = (req, res, next) => {
+  User.findOne({ where: { id: 'chldmsrl12' }})
+    .then(user => console.log(`findId :`, user))
+    .catch(err => console.error(err));
+    next();
+}

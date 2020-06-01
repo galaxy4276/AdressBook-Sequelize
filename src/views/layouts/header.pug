@@ -3,7 +3,7 @@
     a(href=routes.home) 당신을 위한 주소록
 .login_wrapper
   ul.login_container
-    if user
+    if loggedUser
       li
         a 로그 아웃
     else
@@ -14,7 +14,7 @@
 .menu_list
   nav.nav_wrapper
     ul.nav_container
-      if user
+      if loggedUser
         li.nav_item 
           a(href=routes.editAdress) 주소록 작성
         li.nav_item 
