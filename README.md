@@ -13,3 +13,13 @@ Node.js 초보자입니다.
 
 ### 5.26
 * WEBPACK 설정 완료 ( main.js -> (scss to css).css && main.js (converted))
+
+### 5.29
+* Sequelize config 에러 해결 완료 ( 진땀 뻄 )
+* 파일 구조 변경 app.js -> ./src
+
+
+### 5.30
+* 데이터 핸들링 완료
+* DB User 설계 및 적용 완료
+* 

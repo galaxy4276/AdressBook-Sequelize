@@ -1,0 +1,6 @@
+include partials/main
+.login_wrapper
+  form(action=routes.login, method="post")
+    input(type="text", name="id")
+    input(type="password", name="password")
+    button(type="submit") 로그인 하기
