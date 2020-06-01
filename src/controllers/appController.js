@@ -25,8 +25,8 @@ sequelize.sync()
   passportConfig(passport);
   
   
-  // Application Settings       
-  app.set('port', process.env.PORT || 8001);
+// Application Settings       
+app.set('port', process.env.PORT || 8001);
 app.set('view engine', 'pug');
 app.set('views', './src/views');
 app.set('views', path.resolve(__dirname, '../', 'views'));
@@ -48,8 +48,11 @@ app.use(session({
   saveUninitialized: false,
 }));
 
+app.use(test);
 app.use(passport.initialize());
 app.use(passport.session());
+
+
 
 
 export default app;

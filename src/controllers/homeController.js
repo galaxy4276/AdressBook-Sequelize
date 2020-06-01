@@ -9,9 +9,11 @@ export const goHome = async (req, res) => {
   res.render('home', { data });
 };
 
+
 export const goEditAddr = (req, res) => {
   res.render('editAdress', {});
 };
+
 
 export const postEditAddr = async (req, res) => {
   const { title, content } = req.body;
@@ -42,9 +44,34 @@ export const getLogin = (req, res) => {
   res.render('login', {});
 };
 
-export const test = (req, res, next) => {
-  User.findOne({ where: { id: 'chldmsrl12' }})
-    .then(user => console.log(`findId :`, user))
+
+export const getJoin = (req, res) => {
+  res.render('join', {});
+}
+
+
+export const postJoin = async (req, res) => {
+  const { id, password } = req.body;
+  try {
+    const alreadyAcc = await User.findOne({ where: { id } });
+    if (alreadyAcc) {
+      res.redirect(routes.home);
+    }
+    await User.create({
+      id,
+      pw: password,
+    });
+    res.redirect(routes.home);
+  } catch (err) {
+    console.error(err);
+    res.redirect(routes.join);  
+  }
+};
+
+
+export const test = async (req, res, next) => {
+  await User.findById('chldmsrl12')
+    .then(user => console.log('findId :', user))
     .catch(err => console.error(err));
     next();
 }

@@ -1,6 +1,8 @@
 include partials/main
 .login_wrapper
   form(action=routes.login, method="post")
+    label(for="id") 아이디
     input(type="text", name="id")
+    label(for="password") 비밀번호
     input(type="password", name="password")
     button(type="submit") 로그인 하기

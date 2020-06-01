@@ -1,0 +1,8 @@
+include partials/main
+.login_wrapper
+  form(action=routes.join, method="post")
+    label 아이디
+    input(type="text", name="id")
+    label 비밀번호
+    input(type="password", name="password")
+    button(type="submit") 회원가입
