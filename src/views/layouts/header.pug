@@ -5,7 +5,7 @@
   ul.login_container
     if loggedUser
       li
-        a 로그 아웃
+        a(href=routes.logout) 로그 아웃
     else
       li 
         a(href=routes.login) 로그인

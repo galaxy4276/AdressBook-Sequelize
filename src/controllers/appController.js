@@ -22,8 +22,6 @@ sequelize.sync()
     console.log('connect failed..\n', err);
   });
 
-  passportConfig(passport);
-  
   
 // Application Settings       
 app.set('port', process.env.PORT || 8001);
@@ -48,11 +46,8 @@ app.use(session({
   saveUninitialized: false,
 }));
 
-app.use(test);
 app.use(passport.initialize());
 app.use(passport.session());
-
-
-
+passportConfig();
 
 export default app;

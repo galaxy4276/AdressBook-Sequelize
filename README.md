@@ -22,4 +22,9 @@ Node.js 초보자입니다.
 ### 5.30
 * 데이터 핸들링 완료
 * DB User 설계 및 적용 완료
-* 
+
+
+### 6.02
+* passport authentication complete
+* passport 로그인, 로그아웃 기능 구현
+  

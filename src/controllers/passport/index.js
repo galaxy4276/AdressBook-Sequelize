@@ -1,18 +1,23 @@
 import passport from 'passport';
-import { User } from '../../models/index';
+import { User } from '../../models';
 import local from './LocalStrategy';
+const LocalStrategy = require('passport-local').Strategy;
 
-const passportSettings = (passport) => {
+const passportSettings = () => {
   passport.serializeUser((user, done) => {
-    done(null, user);
+    console.log(`serializeUser: ${user}`);
+    done(null, user.id);
   });
 
-  passport.deserializeUser((id, done) => {
-    User.findById(id)
-    .then(user => done(user))
-    .catch(err => done(err));
+  passport.deserializeUser( async (id, done) => {
+    User.findOne({
+      where: { id },
+    })
+      .then( user => done(null, user))
+      .catch( err => done(err));
   });
-  local(passport);
-};
+
+  local();
+}
 
 export default passportSettings;

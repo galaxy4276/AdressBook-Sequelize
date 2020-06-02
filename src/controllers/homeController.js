@@ -1,6 +1,7 @@
 import routes from '../routes';
 import { Post, User } from '../models';
 import passport from 'passport';
+import bcrypt from 'bcrypt';
 
 export const goHome = async (req, res) => {
   console.log('req.user :', req.user);
@@ -42,7 +43,7 @@ export const postLogin = passport.authenticate('local', {
 
 export const getLogin = (req, res) => {
   res.render('login', {});
-};
+};   
 
 
 export const getJoin = (req, res) => {
@@ -75,3 +76,9 @@ export const test = async (req, res, next) => {
     .catch(err => console.error(err));
     next();
 }
+
+
+export const logout = (req, res) => {
+  req.logout();
+  res.redirect(routes.home);
+};
