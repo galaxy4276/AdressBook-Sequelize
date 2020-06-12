@@ -27,4 +27,4 @@ Node.js 초보자입니다.
 ### 6.02
 * pasport authentication  complete
 * login, logout, join 기능 불완전한 구현
-* sequelizerc option setting.
+* sequelizerc option setting.     

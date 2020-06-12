@@ -61,6 +61,7 @@ export const postJoin = async (req, res) => {
     await User.create({
       id,
       pw: password,
+      fk_id_key: req.user[0].id,
     });
     res.redirect(routes.home);
   } catch (err) {
@@ -82,3 +83,4 @@ export const logout = (req, res) => {
   req.logout();
   res.redirect(routes.home);
 };
+

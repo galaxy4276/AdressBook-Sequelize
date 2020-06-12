@@ -1,7 +1,7 @@
 import express from 'express';
 import routes from './index';
 import { goHome, goEditAddr, postEditAddr, postLogin, getLogin,
-   getJoin, postJoin, logout } from '../controllers/homeController';
+  getJoin, postJoin, logout } from '../controllers/homeController';
 
 const homeRouter = express.Router();
 
