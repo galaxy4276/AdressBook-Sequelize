@@ -13,9 +13,16 @@ const sequelize = new Sequelize(config.database, config.username,
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
+
 db.Post = require('./Post')(sequelize, Sequelize);
 db.User = require('./User')(sequelize, Sequelize);
 
-db.Post.belongsTo(db.User, { foreignKey: 'fk_id_key', targetKey: 'id' });                                                                           
+db.Post.hasOne(db.User, {
+  foreignKey: 'id',
+});
+db.User.hasMany(db.Post, {
+  foreignKey: 'id',
+});
+
 
 module.exports = db;
