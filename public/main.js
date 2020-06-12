@@ -81,31 +81,31 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/assets/js/main.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./assets/js/main.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/assets/js/main.js":
-/*!*******************************!*\
-  !*** ./src/assets/js/main.js ***!
-  \*******************************/
+/***/ "./assets/js/main.js":
+/*!***************************!*\
+  !*** ./assets/js/main.js ***!
+  \***************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/main.scss */ \"./src/assets/scss/main.scss\");\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scss_main_scss__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\n\r\nconst func = async () => {\r\n  console.log('안녕하세요.');\r\n};\r\n\r\nfunc();\n\n//# sourceURL=webpack:///./src/assets/js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/main.scss */ \"./assets/scss/main.scss\");\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scss_main_scss__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\n\r\nconst func = async () => {\r\n  console.log('안녕하세요.');\r\n};\r\n\r\nfunc();\n\n//# sourceURL=webpack:///./assets/js/main.js?");
 
 /***/ }),
 
-/***/ "./src/assets/scss/main.scss":
-/*!***********************************!*\
-  !*** ./src/assets/scss/main.scss ***!
-  \***********************************/
+/***/ "./assets/scss/main.scss":
+/*!*******************************!*\
+  !*** ./assets/scss/main.scss ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/assets/scss/main.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./assets/scss/main.scss?");
 
 /***/ })
 

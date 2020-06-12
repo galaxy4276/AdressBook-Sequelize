@@ -9,7 +9,7 @@ import session from 'express-session';
 // sequelize 
 const sequelize = require('../models').sequelize;
 // passport 
-import passportConfig from '../controllers/passport';
+import passportConfig from './passport';
 import { test } from './homeController';
 
 dotenv.config();  
@@ -26,7 +26,6 @@ sequelize.sync()
 // Application Settings       
 app.set('port', process.env.PORT || 8001);
 app.set('view engine', 'pug');
-app.set('views', './src/views');
 app.set('views', path.resolve(__dirname, '../', 'views'));
 
 

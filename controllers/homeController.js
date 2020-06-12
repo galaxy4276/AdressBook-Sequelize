@@ -5,7 +5,7 @@ import bcrypt from 'bcrypt';
 
 export const goHome = async (req, res) => {
   console.log('req.user :', req.user);
-  const data = await Post.findAll();
+  const data = await Post.findAll({});
 
   res.render('home', { data });
 };
@@ -14,7 +14,6 @@ export const goHome = async (req, res) => {
 export const goEditAddr = (req, res) => {
   res.render('editAdress', {});
 };
-
 
 export const postEditAddr = async (req, res) => {
   const { title, content } = req.body;

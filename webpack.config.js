@@ -2,8 +2,8 @@ const path = require('path');
 const ExtractCSS = require('mini-css-extract-plugin');
 
 const MODE = 'development';
-const ENTRY_FILE = path.resolve(__dirname, 'src', 'assets', 'js', 'main.js');
-const OUTPUT_DIR = path.resolve(__dirname, 'src', 'public');
+const ENTRY_FILE = path.resolve(__dirname, 'assets', 'js', 'main.js');
+const OUTPUT_DIR = path.resolve(__dirname, 'public');
 
 module.exports = {
   entry: ENTRY_FILE,
