@@ -17,7 +17,6 @@ db.Sequelize = Sequelize;
 db.Post = require('./Post')(sequelize, Sequelize);
 db.User = require('./User')(sequelize, Sequelize);
 
-
 db.Post.hasOne(db.User, {
   foreignKey: 'id',
 });
